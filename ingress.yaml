@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  name: ky
+spec:
+  rules:
+  - host: ky.kili.kly.no
+    http:
+      paths:
+      - backend:
+          serviceName: ky
+          servicePort: 80
+        path: /
+  tls:
+  - hosts:
+    - ky.kili.kly.no
+    secretName: ky-kili-kly-no-tls

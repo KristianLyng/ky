@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ky
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ky
+  template:
+    metadata:
+      labels:
+        app: ky
+    spec:
+      containers:
+      - image: nginx:latest
+        name: nginx
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: kydata
+      volumes:
+      - name: kydata
+        persistentVolumeClaim:
+          claimName: ky
