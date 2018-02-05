@@ -1,14 +1,14 @@
-Initial deployment:
+Initial deployment::
 
-kubectl create -f pvc.yaml
-kubectl create -f deploy.yaml
-kubectl expose service ky
-kubectl create -f ingress.yaml
+        kubectl create -f pvc.yaml
+        kubectl create -f deploy.yaml
+        kubectl expose service ky
+        kubectl create -f ingress.yaml
 
 
-Update:
+Update::
 
-rst2html index.rst > index.html
-kubectl get pod -l app=ky # Fisk ut pod-navn
-kubectl cp ./index.html pod-navn:/usr/share/nginx/html/index.html
+        rst2html index.rst > index.html
+        kubectl get pod -l app=ky # Fisk ut pod-navn
+        kubectl cp ./index.html pod-navn:/usr/share/nginx/html/index.html
 
