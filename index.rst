@@ -1,5 +1,7 @@
 - https://kly.no
+- https://bilder.kly.no
+- https://kly.no/misc
+- https://varnishfoo.info
 - https://friday.horse
 - https://tg.friday.horse
 - https://nesquik.nu
-
